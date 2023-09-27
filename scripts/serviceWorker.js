@@ -7,6 +7,3 @@ if ( 'serviceWorker' in navigator ) {
 }else{
     console.log("👎🏿👎🏿 No service worker..");
 }
-
-
-let container = document.getElementById("container");
