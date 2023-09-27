@@ -1,0 +1,25 @@
+:root{
+    --dark_theame: black;
+    --light_theme: white;
+    --dark_primary: teal;
+    --dark_secondary: rgb(23, 184, 184);
+    --dark_tertiary: rgb(10, 233, 233);
+    --light_primary: rgb(3, 164, 228);
+    --light_secondary: rgb(37, 193, 255);
+    --light_tertiary: rgb(168, 230, 255);
+}
+
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Bebas Neue', cursive;
+}
+html{
+    background-color: var(--dark_theame);
+}
+html.light{
+    background-color: var(--light_theme);
+}
+h1{
+    color: aliceblue;
+}
