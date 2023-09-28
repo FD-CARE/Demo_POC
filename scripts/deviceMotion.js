@@ -3,7 +3,7 @@ window.addEventListener('devicemotion', (event)=>{
     const accWithGravity = event.accelerationIncludingGravity;
     const rotationRate = event.rotationRate;
 
-    const threshold = 3; // main goal is to change it.
+    const threshold = 7; // main goal is to change it.
     
     const totalAcceleration = Math.sqrt(
       acc.x * acc.x +
