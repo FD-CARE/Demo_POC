@@ -3,7 +3,7 @@ window.addEventListener('devicemotion', (event)=>{
     const accWithGravity = event.accelerationIncludingGravity;
     const rotationRate = event.rotationRate;
 
-    const threshold = 7; // main goal is to change it.
+    const threshold = 8; // main goal is to change it.
     
     const totalAcceleration = Math.sqrt(
       acc.x * acc.x +
@@ -14,6 +14,7 @@ window.addEventListener('devicemotion', (event)=>{
         document.body.style.backgroundColor = "#ff0000";   
     }else{
         document.body.style.backgroundColor= "#0cff00";
+        window.removeEventListener("devicemotion");
     }
 
     const dev = document.getElementById("deviceMotion");
