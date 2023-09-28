@@ -4,16 +4,15 @@ if ('DeviceOrientationEvent' in window) {
         const alpha = event.alpha; // Z-axis rotation
         const beta = event.beta;   // X-axis rotation
         const gamma = event.gamma; // Y-axis rotation
-        console.log(`alpha: ${alpha}, beta: ${beta}, gamma: ${gamma}`);
-
+        
         const dev = document.getElementById("deviceOrientation");
         if(dev){
             dev.innerHTML=`
             <br>
             <h1>Device Orientation Data</h1>
-            <h1>alpha = ${alpha}</h1>
-            <h1>beta = ${beta}</h1>
-            <h1>gamma = ${gamma}</h1>
+            <h1>Alpha = ${alpha}</h1>
+            <h1>Beta = ${beta}</h1>
+            <h1>Gamma = ${gamma}</h1>
         `;
         }else{
             const deviceOrientation = document.createElement("div");
@@ -21,9 +20,9 @@ if ('DeviceOrientationEvent' in window) {
             deviceOrientation.innerHTML=`
                 <br>
                 <h1>Device Orientation Data</h1>
-                <h1>alpha = ${alpha}</h1>
-                <h1>beta = ${beta}</h1>
-                <h1>gamma = ${gamma}</h1>
+                <h1>Alpha = ${alpha}</h1>
+                <h1>Beta = ${beta}</h1>
+                <h1>Gamma = ${gamma}</h1>
             `;
 
             container.appendChild(deviceOrientation);

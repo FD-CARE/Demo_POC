@@ -8,9 +8,9 @@ window.addEventListener('devicemotion', (event)=>{
         dev.innerHTML=`
             <br>
             <h1>Device Motion Data</h1>
-            <h1>acc = { x : ${acc.x} , y : ${acc.y} , z : ${acc.z} }</h1>
-            <h1>accWithGravity = { x : ${accWithGravity.x} , y : ${accWithGravity.y} , z : ${accWithGravity.z} }</h1>
-            <h1>rotationRate = { alpha : ${rotationRate.alpha} , beta : ${rotationRate.beta} , gamma : ${rotationRate.gamma} }</h1>
+            <h1>Acc = { x : ${acc.x} , y : ${acc.y} , z : ${acc.z} }</h1>
+            <h1>Acc (Gravity) = { x : ${accWithGravity.x} , y : ${accWithGravity.y} , z : ${accWithGravity.z} }</h1>
+            <h1>Rotation Rate = { alpha : ${rotationRate.alpha} , beta : ${rotationRate.beta} , gamma : ${rotationRate.gamma} }</h1>
         `;
     }else{
         const deviceMotion = document.createElement("div");
@@ -18,9 +18,9 @@ window.addEventListener('devicemotion', (event)=>{
         deviceMotion.innerHTML=`
                 <br>
                 <h1>Device Motion Data</h1>
-                <h1>acc = { x : ${acc.x} , y : ${acc.y} , z : ${acc.z} }</h1>
-                <h1>accWithGravity = { x : ${accWithGravity.x} , y : ${accWithGravity.y} , z : ${accWithGravity.z} }</h1>
-                <h1>rotationRate = { alpha : ${rotationRate.alpha} , beta : ${rotationRate.beta} , gamma : ${rotationRate.gamma} }</h1>
+                <h1>Acc = { x : ${acc.x} , y : ${acc.y} , z : ${acc.z} }</h1>
+                <h1>Acc (Gravity) = { x : ${accWithGravity.x} , y : ${accWithGravity.y} , z : ${accWithGravity.z} }</h1>
+                <h1>Rotation Rate = { alpha : ${rotationRate.alpha} , beta : ${rotationRate.beta} , gamma : ${rotationRate.gamma} }</h1>
         `;
         container.appendChild(deviceMotion);
     }
