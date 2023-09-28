@@ -12,9 +12,9 @@ window.addEventListener('devicemotion', (event)=>{
     );
     if(totalAcceleration > threshold){
         document.body.style.backgroundColor = "#ff0000";   
+        window.removeEventListener("devicemotion");
     }else{
         document.body.style.backgroundColor= "#0cff00";
-        window.removeEventListener("devicemotion");
     }
 
     const dev = document.getElementById("deviceMotion");
