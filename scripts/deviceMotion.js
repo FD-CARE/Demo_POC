@@ -12,17 +12,9 @@ window.addEventListener('devicemotion', (event)=>{
     );
     if(totalAcceleration > threshold){
         document.body.style.backgroundColor = "#ff0000";
-        document.body.style.width="500px";
-        document.body.style.height="500px"
-        document.body.style.length="500px";
-        document.body.innerHTML="<h1>FALL</h1>";
         window.removeEventListener("devicemotion");
     }else{
         document.body.style.backgroundColor= "#0cff00";
-        document.body.style.length="500px";
-        document.body.style.height="500px"
-        document.body.style.width="500px";
-        document.body.innerHTML="<h1>NO FALL</h1>";
     }
 
     const dev = document.getElementById("deviceMotion");
