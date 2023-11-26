@@ -20,7 +20,7 @@ window.addEventListener('devicemotion', (event)=>{
     //Test Begin
     const loadModel = async ()=>{
         const model = await tf.loadLayersModel("model_v1_0_acc_gyr_js.model/model.json");
-        const data = tf.constant([4,acc.x,acc.y,acc.z]);
+        const data = tf.tensor2d([[4,acc.x,acc.y,acc.z]]);
         const res = model.predict(data);
         console.log(res);
         if(res == 1){
