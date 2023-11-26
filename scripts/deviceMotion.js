@@ -3,24 +3,31 @@ window.addEventListener('devicemotion', (event)=>{
     const accWithGravity = event.accelerationIncludingGravity;
     const rotationRate = event.rotationRate;
 
-    const threshold = 13; // main goal is to change it.
+    // const threshold = 13; // main goal is to change it.
     
-    const totalAcceleration = Math.sqrt(
-      acc.x * acc.x +
-      acc.y * acc.y +
-      acc.z * acc.z
-    );
-    if(totalAcceleration > threshold){
-        document.body.style.backgroundColor = "#ff0000";
-        window.removeEventListener("devicemotion");
-    }else{
-        document.body.style.backgroundColor= "#0cff00";
-    }
+    // const totalAcceleration = Math.sqrt(
+    //   acc.x * acc.x +
+    //   acc.y * acc.y +
+    //   acc.z * acc.z
+    // );
+    // if(totalAcceleration > threshold){
+    //     document.body.style.backgroundColor = "#ff0000";
+    //     window.removeEventListener("devicemotion");
+    // }else{
+    //     document.body.style.backgroundColor= "#0cff00";
+    // }
 
     //Test Begin
     const loadModel = async ()=>{
         const model = await tf.loadModel("../model_v1_0_acc_gyr_js.model/model.json");
-        model.predict(tf.tensor2d([["portrait",acc.x,acc.y,acc.z]])).print();
+        const res = model.predict(tf.tensor2d([["portrait",acc.x,acc.y,acc.z]]));
+        
+        if(res == 1){
+            document.body.style.backgroundColor = "#ff0000";
+            window.removeEventListener("devicemotion");
+        }else{
+            document.body.style.backgroundColor= "#0cff00";
+        }
     }
 
     loadModel();
