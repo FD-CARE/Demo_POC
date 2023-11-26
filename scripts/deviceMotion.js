@@ -21,7 +21,7 @@ window.addEventListener('devicemotion', (event)=>{
     const loadModel = async ()=>{
         const model = await tf.loadLayersModel("model_v1_0_acc_gyr_js.model/model.json");
         const data = tf.tensor2d([[4,acc.x,acc.y,acc.z]]);
-        const res = model.predict(data);
+        const res = model.predict(data).print();
         console.log(res);
         if(res == 1){
             document.body.style.backgroundColor = "#ff0000";
