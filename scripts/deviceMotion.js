@@ -17,6 +17,15 @@ window.addEventListener('devicemotion', (event)=>{
         document.body.style.backgroundColor= "#0cff00";
     }
 
+    //Test Begin
+    const loadModel = async ()=>{
+        const model = await tf.loadModel("../model_v1_0_acc_gyr_js.model/model.json");
+        model.predict(tf.tensor2d([["portrait",acc.x,acc.y,acc.z]])).print();
+    }
+
+    loadModel();
+
+    //End
     const dev = document.getElementById("deviceMotion");
     if(dev){
         dev.innerHTML=`
